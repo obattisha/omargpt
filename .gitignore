@@ -12,6 +12,8 @@ claudememory.rtf
 # Personal context and identity data
 omar_context.txt
 constitution_synthetic_examples.jsonl
+constitution_system_prompt.txt
+constitution.md
 
 # Python
 __pycache__/

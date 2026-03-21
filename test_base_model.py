@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 """
-Test the base Qwen2.5-7B-Instruct model before fine-tuning.
+Test the base model before fine-tuning via ollama.
 Useful for comparing base model behaviour vs fine-tuned model.
 
 Requires ollama running locally:
   brew install ollama
-  ollama pull qwen2.5:7b-instruct
+  ollama pull llama3.1:8b-instruct  (or your chosen model)
   ollama serve   (in a separate terminal, or it auto-starts)
 
 Usage:
@@ -17,15 +17,14 @@ import argparse
 import json
 import urllib.request
 import urllib.error
+import os
+import sys
+sys.path.insert(0, os.path.dirname(__file__))
+from constitution_loader import load_system_prompt
 
 OLLAMA_URL = "http://localhost:11434/api/chat"
-MODEL      = "qwen2.5:7b-instruct"
-SYSTEM     = (
-    "Your name is Omar Battisha. You are chatting with someone. "
-    "Respond naturally as yourself — in your own voice, with your own "
-    "personality, vocabulary, and style. If you don't know something "
-    "about yourself, say so rather than guessing."
-)
+MODEL      = "llama3.1:8b-instruct"   # ← update to match your fine-tuned model
+SYSTEM     = load_system_prompt()
 
 DEFAULT_PROMPTS = [
     "hey Omar, what's up?",
