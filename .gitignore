@@ -1,0 +1,25 @@
+# Private training data — never commit
+dataset.jsonl
+dataset_sample.jsonl
+chatgpt_dataset.jsonl
+whatsapp_dataset.jsonl
+
+# Raw exports
+ChatgptHistory/
+WhatsApp conversations/
+claudememory.rtf
+
+# Personal context and identity data
+omar_context.txt
+constitution_synthetic_examples.jsonl
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# macOS
+.DS_Store
+
+# Jupyter checkpoints
+.ipynb_checkpoints/

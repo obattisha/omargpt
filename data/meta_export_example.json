@@ -1,0 +1,28 @@
+{
+  "participants": [
+    {"name": "Your Name"},
+    {"name": "Friend Name"}
+  ],
+  "messages": [
+    {
+      "sender_name": "Friend Name",
+      "timestamp_ms": 1700000000000,
+      "content": "hey are you free this weekend"
+    },
+    {
+      "sender_name": "Your Name",
+      "timestamp_ms": 1700000060000,
+      "content": "yeah should be, what's up"
+    },
+    {
+      "sender_name": "Friend Name",
+      "timestamp_ms": 1700000120000,
+      "content": "thinking of going hiking"
+    },
+    {
+      "sender_name": "Your Name",
+      "timestamp_ms": 1700000180000,
+      "content": "I'm down, which trail?"
+    }
+  ]
+}

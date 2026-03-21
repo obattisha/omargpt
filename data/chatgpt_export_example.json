@@ -1,0 +1,45 @@
+[
+  {
+    "title": "Example conversation",
+    "create_time": 1700000000.0,
+    "current_node": "node-002",
+    "mapping": {
+      "node-001": {
+        "id": "node-001",
+        "parent": null,
+        "children": ["node-002"],
+        "message": {
+          "author": {"role": "user"},
+          "content": {
+            "content_type": "text",
+            "parts": ["can you help me plan a trip to Morocco?"]
+          }
+        }
+      },
+      "node-002": {
+        "id": "node-002",
+        "parent": "node-001",
+        "children": ["node-003"],
+        "message": {
+          "author": {"role": "assistant"},
+          "content": {
+            "content_type": "text",
+            "parts": ["Sure! Morocco is a great choice. Which cities are you thinking?"]
+          }
+        }
+      },
+      "node-003": {
+        "id": "node-003",
+        "parent": "node-002",
+        "children": [],
+        "message": {
+          "author": {"role": "user"},
+          "content": {
+            "content_type": "text",
+            "parts": ["I want to do Fez, Chefchaouen, and maybe Rabat. 5 days total."]
+          }
+        }
+      }
+    }
+  }
+]
