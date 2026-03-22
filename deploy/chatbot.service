@@ -1,0 +1,20 @@
+[Unit]
+Description=Omar Chatbot
+Documentation=https://github.com/obattisha/omargpt
+After=network.target ollama.service
+Requires=ollama.service
+
+[Service]
+Type=simple
+User=ubuntu
+WorkingDirectory=/home/ubuntu/omargpt
+ExecStart=/usr/bin/python3 serve.py
+Restart=on-failure
+RestartSec=15
+
+# Log to journald — view with: journalctl -u chatbot -f
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
